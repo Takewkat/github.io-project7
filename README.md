@@ -1,2 +1,2 @@
 # github.io-project7
-Fulstack task
+Fullstack task
