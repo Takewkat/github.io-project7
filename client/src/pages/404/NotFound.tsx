@@ -1,18 +1,19 @@
 import Title from "../../components/Header/Title";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import AllCards from "../../containers/AllCards/AllCards";
 
-const HomePage: React.FunctionComponent = () => {
+const NotFound: React.FunctionComponent = () => {
 
   return (
     <>
-      <Title title={('Home')} />
+      <Title title={('404')} />
       <Header />
-      <AllCards />
+      <main> 
+        <h1>404</h1>
+      </main>
       <Footer />
     </>
   );
 };
 
-export default HomePage;
+export default NotFound;

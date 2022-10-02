@@ -1,18 +1,19 @@
 import Title from "../../components/Header/Title";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import AllCards from "../../containers/AllCards/AllCards";
 
-const HomePage: React.FunctionComponent = () => {
+const About: React.FunctionComponent = () => {
 
   return (
     <>
-      <Title title={('Home')} />
+      <Title title={('A Propos')} />
       <Header />
-      <AllCards />
+      <main> 
+        <h1>1 Step: Set up About</h1>
+      </main>
       <Footer />
     </>
   );
 };
 
-export default HomePage;
+export default About;
