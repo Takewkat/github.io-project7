@@ -4,10 +4,12 @@
 .footer {
   background-color: var.$blackColor;
   color: var.$whiteColor;
+  margin-top: 20px;
   &__container {
     height: 209px;
     line-height: 120%;
     @include adaptiv-value("font-size", 24, 12, 1);
+    @include adaptiv-value("margin-top", 66, 60, 1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,12 +19,18 @@
     font-size: var.$fontSizeTitle;
     height: 40px;
     width: 122px;
-  }
-  &_link {
-    display: flex;
-    align-items: center;
-  }
-  &_svg {
-    transform: translateY(4px);
+    margin-bottom: 26px;
+    &-link {
+      display: flex;
+      align-items: center;
+      color: var.$whiteColor;
+      &:hover {
+        color: var.$redColor;
+      }
+    }
+    &-svg {
+      transform: translateY(4px);
+      height: 26px;
+    }
   }
 }

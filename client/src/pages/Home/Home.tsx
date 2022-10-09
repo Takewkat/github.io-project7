@@ -2,6 +2,7 @@ import Title from "../../components/Header/Title";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import AllCards from "../../containers/AllCards/AllCards";
+import Wallpaper from "../../components/Wallpaper/Wallpaper";
 
 const HomePage: React.FunctionComponent = () => {
 
@@ -9,7 +10,10 @@ const HomePage: React.FunctionComponent = () => {
     <>
       <Title title={('Home')} />
       <Header />
-      <AllCards />
+      <main>
+        <Wallpaper />
+        <AllCards />
+      </main>
       <Footer />
     </>
   );

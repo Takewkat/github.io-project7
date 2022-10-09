@@ -2,17 +2,51 @@
 @import '../../styles/mixins.scss';
 
 .header {
-  height: 171px;
+  @include adaptiv-value("height", 126, 94, 1);
   background-color: var.$whiteColor;
   color: var.$redColor;
   &__container {
-  line-height: 120%;
-    @include adaptiv-value("font-size", 24, 12, 1);
-  }
-  &_svg {
-  }
-  &_link {
+    @include adaptiv-value("height", 68, 48, 1);
+    @include adaptiv-value("margin-top", 40, 20, 1);
+    @include adaptiv-value("margin-bottom", 40, 20, 1);
+    line-height: 120%;
     display: flex;
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &-flex {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &__title {
+    @include adaptiv-value("font-size", 48, 34, 1);
+    font-weight: var.$fontMedium;
+    &-link {
+      display: flex;
+      align-items: flex-start;
+      color: var.$redColor
+    }
+    &-svg {
+      transform: translateY(4px);
+      height: 30px;
+    }
+  }
+  &__text {
+    @include adaptiv-value("font-size", 24, 12, 1);
+    @include adaptiv-value("margin-left", 56, 10, 1);
+    color: var.$redColor;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+    a {
+      color: var.$redColor;
+    }
+    @media (max-width: var.$md3 + px) {
+      text-transform: uppercase;
+    }
+    &-active {
+      text-decoration: underline;
+    }
   }
 }

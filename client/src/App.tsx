@@ -8,11 +8,13 @@ import About from './pages/About/About';
 
 const App: React.FunctionComponent = () => {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="*" element={<NotFound />} />
-      <Route path='/about' element={<About />} />
-    </Routes>
+    <div className="wrapper page">
+      <Routes>      
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path='/about' element={<About />} />      
+      </Routes>
+    </div>
   );
 };
 

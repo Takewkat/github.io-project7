@@ -4,6 +4,7 @@
 
 body {
 	color: var.$blackColor;
+	font-family: var.$fontFamily;
 	&._lock {
 		overflow: hidden;
 	}
@@ -25,15 +26,17 @@ body {
 		max-width: 970px;
 	}
 	@media (max-width: var.$md2+px) {
-		max-width: 750px;
+		//max-width: 750px;
+		max-width: 760px;
 	}
 	@media (max-width: var.$md3+px) {
 		max-width: none;
-		padding: 0 10px;
+		padding: 0 20px;
 	}
 }
 //====================================================================================================
 //====================================================================================================
 .page {
 	flex: 1 1 auto;
+	line-height: 140%;
 }
