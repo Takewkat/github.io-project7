@@ -1,6 +1,6 @@
 # github.io-project7
 
-Fullstack task
+Frontend task
 
 ### Frontend (client) : 
 React + TypeScript

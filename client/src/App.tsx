@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import './App.scss';
+import './styles/App.scss';
 
 import HomePage from './pages/Home/Home';
 import NotFound from './pages/404/NotFound';

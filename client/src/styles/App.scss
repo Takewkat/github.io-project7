@@ -1,6 +1,6 @@
-@use './styles/variables.scss' as var;
-@import './styles/null.scss';
-@import './styles/mixins.scss';
+@use './variables.scss' as var;
+@import './null.scss';
+@import './mixins.scss';
 
 body {
 	color: var.$blackColor;
@@ -22,8 +22,10 @@ body {
 ._container {
 	max-width: var.$maxWidthContainer + px;
 	margin: 0 auto;
+	width: 100%;
 	@media (max-width: var.$md1+px) {
 		max-width: 970px;
+		padding: 0 20px;
 	}
 	@media (max-width: var.$md2+px) {
 		//max-width: 750px;
@@ -31,7 +33,6 @@ body {
 	}
 	@media (max-width: var.$md3+px) {
 		max-width: none;
-		padding: 0 20px;
 	}
 }
 //====================================================================================================

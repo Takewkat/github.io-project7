@@ -2,7 +2,7 @@
 @import '../../styles/mixins.scss';
 
 .header {
-  @include adaptiv-value("height", 126, 94, 1);
+  @include adaptiv-value("height", 126, 84, 1);
   background-color: var.$whiteColor;
   color: var.$redColor;
   &__container {

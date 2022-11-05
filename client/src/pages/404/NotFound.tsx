@@ -6,7 +6,7 @@ const NotFound: React.FunctionComponent = () => {
 
   return (
     <>
-      <Title title={('404')} />
+      <Title title='404' />
       <Header />
       <main> 
         <h1>404</h1>

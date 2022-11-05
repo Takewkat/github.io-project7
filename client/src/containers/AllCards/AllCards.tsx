@@ -10,8 +10,13 @@ import cards from '../../services/logements.json';
 // Step 3: Lazy loading
 
 const AllCards: React.FunctionComponent = () => {
+  //const [loading, setLoading] = React.useState(true);
+  //const [error, setError] = React.useState(false);
+  //const [data, setData] = React.useState(cards);
+
+
   return (
-    <main className="allcards _container">
+    <main className="allcards">
       <div className="allcards__grid">
         {cards.map((card) => (
           <CardPreview
