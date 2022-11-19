@@ -1,0 +1,13 @@
+@use '../../styles/variables.scss' as var;
+@import '../../styles/mixins.scss';
+
+.card__accordion {
+  display: grid;
+  align-items: stretch;
+  grid-template-columns: 1fr 1fr;
+  gap: 76px;
+  @media (max-width: var.$md3 + px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

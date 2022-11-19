@@ -1,12 +1,12 @@
 import Title from "../../components/Header/Title";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+
 import AllCards from "../../containers/AllCards/AllCards";
 import Banner from "../../components/Banner/Banner";
 import image from "../../assets/bannerHome.webp";
 
 const HomePage: React.FunctionComponent = () => {
-  
   return (
     <>
       <Title title='Home' />

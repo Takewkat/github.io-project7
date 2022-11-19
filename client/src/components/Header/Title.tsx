@@ -9,7 +9,7 @@ const Title = ({ title }: TitleProps) => {
   return (
     <>
       <Helmet>
-        <title>{title ? `${title} | Kasa` : "Title"}</title>
+        <title>{title ? `${title} | Kasa` : ""}</title>
       </Helmet>
     </>
   );

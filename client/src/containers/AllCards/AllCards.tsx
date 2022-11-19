@@ -1,30 +1,36 @@
 import React from "react";
 import CardPreview from "../../components/CardInfo/CardPreview";
 import './allcards.scss';
-import cards from '../../services/logements.json';
 
-// Step 1: Load the data from the json file
+import * as APIService from "../../services/cardAPI";
+import { useEffect, useState } from "react";
+import { ICardList } from "../../models/CardModel";
 
-//TO DO
-// Step 2: + Loader (spinner) + Error message
-// Step 3: Lazy loading
+import ErrorMessage from "../ErrorsMessage";
 
 const AllCards: React.FunctionComponent = () => {
-  //const [loading, setLoading] = React.useState(true);
-  //const [error, setError] = React.useState(false);
-  //const [data, setData] = React.useState(cards);
 
+  const [cards, setCards] = useState<ICardList>([]);
+
+  useEffect(() => {
+    APIService.getCards().then(cards => setCards(cards));
+  }, []);
 
   return (
     <main className="allcards">
       <div className="allcards__grid">
-        {cards.map((card) => (
-          <CardPreview
-            key={card.id}
-            cover={card.cover}
-            title={card.title}
-          />
-        ))}
+        { cards 
+          ? 
+            cards.map((card) => (
+              <CardPreview
+                key={card.id}
+                cover={card.cover}
+                title={card.title}
+                id={card.id}
+              />
+            ))
+          : <ErrorMessage message="Desolé, nous n'avons pas pu charger les logements. Veuillez réeessayer plus tard" />
+        }
       </div>
     </main>
   );

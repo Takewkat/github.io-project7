@@ -4,7 +4,7 @@ import "./accordion.scss";
 
 interface Props {
   title: string;
-  text: string;
+  text: string | string[];
 }
 
 const Accordion: React.FunctionComponent<Props> = ({title, text}) => {
@@ -24,7 +24,10 @@ const Accordion: React.FunctionComponent<Props> = ({title, text}) => {
         className="accordion__content"
         style={active ? undefined : { display: "none"} }
       >
-        <div className="accordion__text">{text}</div>
+        {
+        typeof text === "string" 
+        ? <div className="accordion__text">{text}</div>
+        : text.map((item, index) => <div key={index} className="accordion__text"><ul>{item}</ul></div>)}
       </div>
     </div>
   );

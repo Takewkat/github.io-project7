@@ -1,21 +1,24 @@
 import Title from "../../components/Header/Title";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+
 import Banner from "../../components/Banner/Banner";
 import image from "../../assets/bannerAbout.webp";
-import about from "../../services/about.json";
 import Accordion from "../../components/CardInfo/Dropdown/Accordion";
 
-// Step 1: Load the data from the json file
+import * as APIService from "../../services/infoAPI";
+import { IInfoModel } from "../../models/InfoModel";
+import { useEffect, useState } from "react";
 
-//TO DO
-// Step 2: + Loader (spinner) + Error message
-// Step 3: Lazy loading
+import ErrorMessage from "../../containers/ErrorsMessage";
 
 const About: React.FunctionComponent = () => {
-  //const [loading, setLoading] = React.useState(true);
-  //const [error, setError] = React.useState(false);
-  //const [data, setData] = React.useState(cards);
+
+  const [data, setData] = useState<IInfoModel>([]);
+
+  useEffect(() => {
+    APIService.getAbout().then(data => setData(data));
+  }, []);
 
   return (
     <>
@@ -24,13 +27,18 @@ const About: React.FunctionComponent = () => {
       <main className="_container"> 
         <Banner image={image} style={{ margin: '24px auto' }}/>
         <section>
-          {about.map((item) => (
-            <Accordion
-              key={item.id}
-              title={item.title}
-              text={item.text}
-            />
-          ))}
+          { data 
+            ? <>
+            {data.map((item) => (
+              <Accordion
+                key={item.id}
+                title={item.title}
+                text={item.text}
+              />
+            ))}
+            </>
+            : <ErrorMessage message="Desolé, nous n'avons pas pu charger les informations. Veuillez réeessayer plus tard" /> 
+          }
         </section>
       </main>
       <Footer />

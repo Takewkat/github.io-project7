@@ -1,4 +1,4 @@
-export type Card = {
+export type ICard = {
   id: string;
   title: string;
   cover: string;
@@ -8,8 +8,10 @@ export type Card = {
     name: string;
     picture: string;
   };
-  rating: number;
+  rating: string;
   location: string;
   equipments: string[];
   tags: string[]
 }
+
+export type ICardList = ICard[];

@@ -1,6 +1,7 @@
 import Title from "../../components/Header/Title";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import './notfound.scss';
 
 const NotFound: React.FunctionComponent = () => {
 
@@ -8,8 +9,10 @@ const NotFound: React.FunctionComponent = () => {
     <>
       <Title title='404' />
       <Header />
-      <main> 
-        <h1>404</h1>
+      <main className="notfound _container"> 
+        <h2 className="notfound__title">404</h2>
+        <div className="notfound__text">Oups! La page que vous demandez n'existe pas.</div>
+        <a href="/" className="notfound__link">Retourner sur la page d'accueil</a>
       </main>
       <Footer />
     </>
