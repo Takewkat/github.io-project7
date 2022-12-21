@@ -11,3 +11,56 @@
     gap: 0;
   }
 }
+
+.card__info {
+  display: grid;
+  align-items: center;
+  &__titlelocation {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: start;
+    @media (max-width: var.$md3 + px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row: 1 / 2;
+    }
+  }
+  &__tags {
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-self: center;
+    margin: 10px 0;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    line-height: 100%;
+    @media (max-width: var.$md3 + px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row: 2 / 3;
+    }
+  }
+  &__host {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+    justify-self: end;
+    @media (max-width: var.$md3 + px) {
+      grid-column: 2 / 2;
+      grid-row: 3 / 3;
+    }
+  }
+  &__rating {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    justify-self: end;
+    @media (max-width: var.$md3 + px) {
+      grid-column: 1 / 2;
+      grid-row: 3 / 3;
+      justify-self: start;
+    }
+  }
+}

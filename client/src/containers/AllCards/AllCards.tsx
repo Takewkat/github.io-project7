@@ -1,4 +1,3 @@
-import React from "react";
 import CardPreview from "../../components/CardInfo/CardPreview";
 import './allcards.scss';
 
@@ -8,7 +7,7 @@ import { ICardList } from "../../models/CardModel";
 
 import ErrorMessage from "../ErrorsMessage";
 
-const AllCards: React.FunctionComponent = () => {
+function AllCards() {
 
   const [cards, setCards] = useState<ICardList>([]);
 

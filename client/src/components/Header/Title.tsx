@@ -5,7 +5,9 @@ interface TitleProps {
   children?: React.ReactNode;
 }
 
-const Title = ({ title }: TitleProps) => {
+function Title ({ 
+  title 
+}: TitleProps) {
   return (
     <>
       <Helmet>

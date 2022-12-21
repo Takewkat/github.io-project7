@@ -1,0 +1,24 @@
+@use '../../styles/variables.scss' as var;
+@import '../../styles/mixins.scss';
+
+.tag__section{
+  display: flex;
+  flex-direction: column;
+  background-color: var.$redColor;
+  color: var.$whiteColor;
+  border-radius: 10px;
+  line-height: 100%;
+  @include adaptiv-value("height", 25, 18, 1);
+  &__text {
+    cursor: pointer;
+    @include adaptiv-value("font-size", 14, 10, 1);
+    padding: 0 22px;
+      @media (max-width: var.$md4 + px) {
+        padding: none;
+        margin: -2px 0;
+      }
+  }
+  @media (max-width: var.$md4+ px) {
+    border-radius: 5px;
+  }
+}

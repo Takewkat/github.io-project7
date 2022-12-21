@@ -1,6 +1,4 @@
 import Title from "../../components/Header/Title";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import './singlecard.scss';
 
 import { useParams } from "react-router-dom";
@@ -9,10 +7,14 @@ import { useEffect, useState } from "react";
 import { ICard } from "../../models/CardModel";
 
 import Carousel from "../../components/CardInfo/Carousel/Carousel";
-import NotFound from "../404/NotFound";
-import Accordion from "../../components/CardInfo/Dropdown/Accordion";
+import Accordion from "../../components/Dropdown/Accordion";
+import Loader from "../../containers/Loader/Loader";
+import Tag from "../../components/CardInfo/Tag";
+import TitleLocation from "../../components/CardInfo/TitleLocation";
+import Host from "../../components/CardInfo/Host";
+import Rating from "../../components/CardInfo/Rating/Rating";
 
-const SingleCard: React.FunctionComponent = () => {
+function SingleCard () {
 
   const { id } = useParams();
   const [card, setCard] = useState<ICard | undefined>();
@@ -25,18 +27,31 @@ const SingleCard: React.FunctionComponent = () => {
     card 
     ? <>
         <Title title={card.title} />
-        <Header />
-          <main className="_container">      
-            Page Set Up 
-            <Carousel pictures={card.pictures} />
-            <div className="card__accordion">
-              <Accordion title="Description" text={card.description} />
-              <Accordion title="Équipements" text={card.equipments} />
+        <main className="_container">
+          <Carousel pictures={card.pictures} />
+          <div className="card__info">
+            <div className="card__info__titlelocation">
+              <TitleLocation title={card.title} location={card.location} />
             </div>
-          </main>
-        <Footer />
+            <div className="card__info__tags">
+              { card.tags &&
+                card.tags.map((tag) => (
+                  <Tag key={tag} tag={tag} />
+                ))
+              }
+            </div>
+            <div className="card__info__host">
+              <Host name={card.host.name} picture={card.host.picture} />
+            </div>
+              <Rating starsSelected={card.rating} />
+          </div>
+          <div className="card__accordion">
+            <Accordion title="Description" children={card.description} cardStyle />
+            <Accordion title="Équipements" children={card.equipments} cardStyle />
+          </div>
+        </main>
       </>
-    : <NotFound />
+    : <Loader />
   );
 };
 

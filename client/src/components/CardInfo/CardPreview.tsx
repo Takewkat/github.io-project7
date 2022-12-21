@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from 'react-router-dom';
 import './cardPreview.scss';
 
 interface Props {
@@ -7,15 +7,19 @@ interface Props {
   id: string;
 }
 
-const CardPreview: React.FunctionComponent<Props> = ({cover, title, id}) => {
+function CardPreview ({
+  cover, 
+  title, 
+  id
+}: Props) {
 
   return (
-    <a href={`/logement/${id}`}>
+    <Link to={`/logement/${id}`}>
       <div className="image__container">
         <img src={cover} alt="preview" className="image__container__img" ></img>
         <div className="image__container__title">{title}</div>
       </div>
-    </a>
+    </Link>
   );
 }
 

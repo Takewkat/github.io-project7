@@ -1,10 +1,10 @@
-import React from "react";
-
 interface Props {
   message: string;
 }
 
-const ErrorMessage: React.FunctionComponent<Props> = ({ message }) => {
+function ErrorMessage ({ 
+  message 
+}: Props) {
   return <h1>{message}</h1>;
 }
 

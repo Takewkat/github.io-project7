@@ -1,4 +1,3 @@
-import React from "react";
 import "./carousel.scss";
 import leftArrow from "./leftArrow.svg";
 import rightArrow from "./rightArrow.svg";
@@ -8,7 +7,10 @@ interface Props {
   direction: string;
 }
 
-const BtnCarousel: React.FunctionComponent<Props> = ({ direction, moveSlide }) => {
+function BtnCarousel ({ 
+  direction, 
+  moveSlide 
+}: Props){
   return (
     <button
       onClick={moveSlide}

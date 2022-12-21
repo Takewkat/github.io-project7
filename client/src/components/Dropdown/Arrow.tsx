@@ -1,23 +1,25 @@
-import React from "react";
-
 interface Props {
   className: string;
   width: string | number;
   fill: string;
 }
 
-const Arrow: React.FunctionComponent<Props> = ({className, width, fill}) => {
+function Arrow ({
+  className, 
+  width, 
+  fill
+}: Props) {
   return (
     <svg
       className={className}
       height="15"
       width={width}
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 25 15"
+      viewBox="0 0 28 17"
     >
       <path
         fill={fill}
-        d="M2.6635 0.859489L0.530579 3.00462L12.4605 14.9233L24.3904 2.99257L22.2575 0.859489L12.4605 10.6572L2.6635 0.859489Z"
+        d="M24.84 16.3466L27.2 13.9733L14 0.786621L0.80001 13.9866L3.16001 16.3466L14 5.50662L24.84 16.3466Z"
       />
     </svg>
   );

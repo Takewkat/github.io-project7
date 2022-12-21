@@ -5,4 +5,4 @@ Frontend task
 ### Frontend (client) : 
 React + TypeScript
 
-Deployment:
+Deployment: https://takewkat.github.io/github.io-project7/

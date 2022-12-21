@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import './carousel.scss';
 import BtnCarousel from './btnCarousel';
 
@@ -6,7 +6,9 @@ interface Props {
   pictures: string[];
 }
 
-const Carousel: React.FunctionComponent<Props> = ({ pictures }) => {
+function Carousel({ 
+  pictures 
+}: Props){
 
   const [slideIndex, setSlideIndex] = useState(1)
 

@@ -1,3 +1,4 @@
+/*
 import { useState } from "react";
 
 export const useFetching = (callback: (...args: any[]) => Promise<any>) => {
@@ -17,3 +18,4 @@ export const useFetching = (callback: (...args: any[]) => Promise<any>) => {
 
   return [fetching, isLoading, error] 
 }
+*/

@@ -1,10 +1,8 @@
 import Title from "../../components/Header/Title";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 
 import Banner from "../../components/Banner/Banner";
 import image from "../../assets/bannerAbout.webp";
-import Accordion from "../../components/CardInfo/Dropdown/Accordion";
+import Accordion from "../../components/Dropdown/Accordion";
 
 import * as APIService from "../../services/infoAPI";
 import { IInfoModel } from "../../models/InfoModel";
@@ -12,7 +10,7 @@ import { useEffect, useState } from "react";
 
 import ErrorMessage from "../../containers/ErrorsMessage";
 
-const About: React.FunctionComponent = () => {
+function About () {
 
   const [data, setData] = useState<IInfoModel>([]);
 
@@ -23,9 +21,8 @@ const About: React.FunctionComponent = () => {
   return (
     <>
       <Title title='A Propos' />
-      <Header />
       <main className="_container"> 
-        <Banner image={image} style={{ margin: '24px auto' }}/>
+        <Banner image={image} />
         <section>
           { data 
             ? <>
@@ -33,7 +30,7 @@ const About: React.FunctionComponent = () => {
               <Accordion
                 key={item.id}
                 title={item.title}
-                text={item.text}
+                children={item.text}
               />
             ))}
             </>
@@ -41,7 +38,6 @@ const About: React.FunctionComponent = () => {
           }
         </section>
       </main>
-      <Footer />
     </>
   );
 };

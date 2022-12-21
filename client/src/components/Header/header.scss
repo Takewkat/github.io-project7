@@ -5,6 +5,9 @@
   @include adaptiv-value("height", 126, 84, 1);
   background-color: var.$whiteColor;
   color: var.$redColor;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   &__container {
     @include adaptiv-value("height", 68, 48, 1);
     @include adaptiv-value("margin-top", 40, 20, 1);
@@ -20,7 +23,7 @@
     }
   }
   &__title {
-    @include adaptiv-value("font-size", 48, 34, 1);
+    font-size: 92px;
     font-weight: var.$fontMedium;
     &-link {
       display: flex;
@@ -29,7 +32,16 @@
     }
     &-svg {
       transform: translateY(4px);
-      height: 30px;
+      height: 56px;
+      @media (max-width: var.$md3+ px) {
+        height: 36px;
+      }
+    }
+    @media (max-width: var.$md3+ px) {
+      font-size: 60px;
+    }
+    @media (max-width: var.$md5+ px) {
+      font-size: 40px;
     }
   }
   &__text {

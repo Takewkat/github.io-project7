@@ -16,9 +16,9 @@
     align-items: center;
   }
   &__title {
-    font-size: var.$fontSizeTitle;
-    height: 40px;
-    width: 122px;
+    font-size: 52px;
+    height: 42px;
+    width: 126px;
     margin-bottom: 26px;
     &-link {
       display: flex;
@@ -30,7 +30,7 @@
     }
     &-svg {
       transform: translateY(4px);
-      height: 26px;
+      height: 30px;
     }
   }
 }

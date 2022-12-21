@@ -1,0 +1,36 @@
+@use '../../styles/variables.scss' as var;
+@import '../../styles/mixins.scss';
+
+.host__section {
+  cursor: pointer;
+  display: flex;
+  color: var.$redColor;
+  align-items: center;
+  justify-content: space-around;
+  &__name {
+    @include adaptiv-value("font-size", 18, 12, 1);
+    font-weight: var.$fontRegular;
+    word-wrap: normal;
+    word-break: normal; 
+    line-break: auto;    
+    width: 50%;
+    text-align: end;
+    line-height: 120%;
+    @media (max-width: var.$md4 + px) {
+      line-height: 134%;
+      font-weight: var.$fontRegular;
+    }
+  }
+  &__picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: var.$greyColorBack;
+    @media (max-width: var.$md4 + px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
