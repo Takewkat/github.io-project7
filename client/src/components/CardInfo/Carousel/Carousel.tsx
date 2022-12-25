@@ -31,7 +31,7 @@ function Carousel({
   }
 
   return (
-    <div className="carousel">
+    <section className="carousel">
       {pictures.map(( src: string, index: number) => {
         return (
           <div
@@ -52,7 +52,7 @@ function Carousel({
             </div>
           </>
       }
-    </div>
+    </section>
   )
 }
 
