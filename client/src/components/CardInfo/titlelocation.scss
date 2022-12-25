@@ -1,0 +1,19 @@
+@use '../../styles/variables.scss' as var;
+@import '../../styles/mixins.scss';
+
+.title-location__section{
+  display: flex;
+  flex-direction: column;
+  color: var.$redColor;
+  &__title{
+    @include adaptiv-value("font-size", 36, 18, 1);
+    font-weight: var.$fontMedium;
+    line-height: 140%;
+    @media (max-width: var.$md4 + px) {
+      font-weight: var.$fontRegular;
+    }
+  }
+  &__text{
+    @include adaptiv-value("font-size", 18, 14, 1);
+  }
+}
