@@ -29,7 +29,7 @@ function SingleCard () {
         <Title title={card.title} />
         <main className="_container">
           <Carousel pictures={card.pictures} />
-          <div className="card__info">
+          <section className="card__info">
             <div className="card__info__titlelocation">
               <TitleLocation title={card.title} location={card.location} />
             </div>
@@ -44,11 +44,11 @@ function SingleCard () {
               <Host name={card.host.name} picture={card.host.picture} />
             </div>
               <Rating starsSelected={card.rating} />
-          </div>
-          <div className="card__accordion">
+          </section>
+          <section className="card__accordion">
             <Accordion title="Description" children={card.description} cardStyle />
             <Accordion title="Équipements" children={card.equipments} cardStyle />
-          </div>
+          </section>
         </main>
       </>
     : <Loader />
