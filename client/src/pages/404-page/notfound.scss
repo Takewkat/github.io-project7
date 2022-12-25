@@ -1,0 +1,40 @@
+@use '../../styles/variables.scss' as var;
+@import '../../styles/mixins.scss';
+
+.notfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var.$redColor;
+  &__title {
+    @include adaptiv-value("font-size", 288, 96, 1);
+    font-weight: var.$fontBold;
+    margin-top: 149px;
+    min-height: 120px;
+    @media (max-width: var.$md3 + px) {
+      margin-top: 178px;
+      min-height: 56px;
+    }
+  }
+  &__text {
+    @include adaptiv-value("font-size", 36, 18, 1);
+    @include adaptiv-value("margin-top", 66, 12, 1);
+    font-weight: 400;
+  }
+  &__link {
+    @include adaptiv-value("font-size", 18, 14, 1);
+    @include adaptiv-value("margin-top", 182, 132, 1);
+    margin-bottom: 159px;
+    color: var.$redColor;
+    text-decoration: underline;
+    font-weight: 400;
+    &:hover {
+      color: var.$redColorHover;
+    }
+    @media (max-width: var.$md3 + px) {
+      margin-bottom: 235px;
+    }
+  }
+}

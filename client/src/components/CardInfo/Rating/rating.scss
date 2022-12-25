@@ -1,0 +1,19 @@
+@use '../../../styles/variables.scss' as var;
+@import '../../../styles/mixins.scss';
+
+.star-rating {
+  cursor: pointer;
+  justify-self: end;
+  @media (max-width: var.$md3 + px) {
+    justify-self: start;
+  }
+}
+
+.star-rating__star {
+  width:36px;
+  height:36px;
+  @media (max-width: var.$md4 + px) {
+    width: 18px;
+    height: 18px;
+  }
+}

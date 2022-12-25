@@ -1,0 +1,36 @@
+@use '../../styles/variables.scss' as var;
+@import '../../styles/mixins.scss';
+
+.footer {
+  background-color: var.$blackColor;
+  color: var.$whiteColor;
+  margin-top: 20px;
+  &__container {
+    height: 209px;
+    line-height: 120%;
+    @include adaptiv-value("font-size", 24, 12, 1);
+    @include adaptiv-value("margin-top", 66, 60, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    font-size: 52px;
+    height: 42px;
+    width: 126px;
+    margin-bottom: 26px;
+    &-link {
+      display: flex;
+      align-items: center;
+      color: var.$whiteColor;
+      &:hover {
+        color: var.$redColor;
+      }
+    }
+    &-svg {
+      transform: translateY(4px);
+      height: 30px;
+    }
+  }
+}
