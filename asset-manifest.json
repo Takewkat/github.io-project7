@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/github.io-project7/static/css/main.2e460e59.css",
+    "main.js": "/github.io-project7/static/js/main.388d8c14.js",
+    "static/media/bannerAbout.webp": "/github.io-project7/static/media/bannerAbout.b042afda92d07e9c127a.webp",
+    "static/media/bannerHome.webp": "/github.io-project7/static/media/bannerHome.4f4d9962f0c0bc3f6341.webp",
+    "index.html": "/github.io-project7/index.html",
+    "static/media/logoHeader.svg": "/github.io-project7/static/media/logoHeader.e545e961344af62e11b2b199c670d1e3.svg",
+    "static/media/logoFooter.svg": "/github.io-project7/static/media/logoFooter.6031d367b39d5e53996f934ee2ff4ed5.svg",
+    "static/media/rightArrow.svg": "/github.io-project7/static/media/rightArrow.fcd8131c4741f9116bc0ec56cc449b13.svg",
+    "static/media/leftArrow.svg": "/github.io-project7/static/media/leftArrow.10a56405f7ff25b1792c6025af90ecbd.svg",
+    "main.2e460e59.css.map": "/github.io-project7/static/css/main.2e460e59.css.map",
+    "main.388d8c14.js.map": "/github.io-project7/static/js/main.388d8c14.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e460e59.css",
+    "static/js/main.388d8c14.js"
+  ]
+}
