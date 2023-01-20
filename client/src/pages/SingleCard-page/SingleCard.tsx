@@ -6,7 +6,7 @@ import * as APIService from "../../services/cardAPI";
 import { useEffect, useState } from "react";
 import { ICard } from "../../models/CardModel";
 
-import Carousel from "../../components/CardInfo/Carousel/Carousel";
+import Carousel from "../../components/CardInfo/Slideshow/Carousel";
 import Accordion from "../../components/Dropdown/Accordion";
 import Loader from "../../containers/Loader/Loader";
 import Tag from "../../components/CardInfo/Tag";
