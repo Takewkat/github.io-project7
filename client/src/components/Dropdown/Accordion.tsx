@@ -13,7 +13,7 @@ function Accordion ({
   children,
   cardStyle,
 }: Props){
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
 
   function toggleAccordion() {
     setActive(!active);
